@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
         outState.putInt(GOAL_TEAM_A, Integer.parseInt(String.valueOf(mGoalTeamATextView.getText())));
         outState.putInt(GOAL_TEAM_B, Integer.parseInt(String.valueOf(mGoalTeamBTextView.getText())));
