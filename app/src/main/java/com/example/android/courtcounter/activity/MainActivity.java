@@ -1,20 +1,22 @@
-package com.example.android.courtcounter;
+package com.example.android.courtcounter.activity;
 
-import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.android.courtcounter.R;
+
+
 public class MainActivity extends AppCompatActivity {
-    public static final String GOAL_TEAM_A = "goalTeamA";
-    public static final String GOAL_TEAM_B = "goalTeamB";
-    public static final String FREE_KICK_TEAM_A = "freeKickTeamA";
-    public static final String FREE_KICK_TEAM_B = "freeKickTeamB";
-    int goalTeamA = 0;
-    int goalTeamB = 0;
-    int freeKickTeamA = 0;
-    int freeKickTeamB = 0;
+    private final String GOAL_TEAM_A = "goalTeamA";
+    private final String GOAL_TEAM_B = "goalTeamB";
+    private final String FREE_KICK_TEAM_A = "freeKickTeamA";
+    private final String FREE_KICK_TEAM_B = "freeKickTeamB";
+    private int goalTeamA = 0;
+    private int goalTeamB = 0;
+    private int freeKickTeamA = 0;
+    private int freeKickTeamB = 0;
     private TextView mGoalTeamATextView;
     private TextView mFreeKickTeamATextView;
     private TextView mGoalTeamBTextView;
@@ -37,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null && savedInstanceState.containsKey(FREE_KICK_TEAM_B)) {
             freeKickTeamB = savedInstanceState.getInt(FREE_KICK_TEAM_B);
         }
+
+        mGoalTeamATextView = findViewById(R.id.team_a_goal);
+        mFreeKickTeamATextView = findViewById(R.id.team_a_free_kick);
+        mGoalTeamBTextView = findViewById(R.id.team_b_goal);
+        mFreeKickTeamBTextView = findViewById(R.id.team_b_free_kick);
 
         displayScore();
     }
@@ -101,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given goals for Team A.
      */
     public void displayGoalForTeamA() {
-        mGoalTeamATextView = findViewById(R.id.team_a_goal);
         mGoalTeamATextView.setText(String.valueOf(goalTeamA));
     }
 
@@ -109,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given free kicks for Team A.
      */
     private void displayFreeKickForTeamA() {
-        mFreeKickTeamATextView = findViewById(R.id.team_a_free_kick);
         mFreeKickTeamATextView.setText(String.valueOf(freeKickTeamA));
     }
 
@@ -117,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given goals for Team B.
      */
     public void displayGoalForTeamB() {
-        mGoalTeamBTextView = findViewById(R.id.team_b_goal);
         mGoalTeamBTextView.setText(String.valueOf(goalTeamB));
     }
 
@@ -125,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given free kicks for Team B.
      */
     private void displayFreeKickForTeamB() {
-        mFreeKickTeamBTextView = findViewById(R.id.team_b_free_kick);
         mFreeKickTeamBTextView.setText(String.valueOf(freeKickTeamB));
     }
 
