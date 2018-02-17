@@ -13,10 +13,10 @@ public class MainActivity extends AppCompatActivity {
     private final String GOAL_TEAM_B = "goalTeamB";
     private final String FREE_KICK_TEAM_A = "freeKickTeamA";
     private final String FREE_KICK_TEAM_B = "freeKickTeamB";
-    private int goalTeamA = 0;
-    private int goalTeamB = 0;
-    private int freeKickTeamA = 0;
-    private int freeKickTeamB = 0;
+    private int goalTeamA;
+    private int goalTeamB;
+    private int freeKickTeamA;
+    private int freeKickTeamB;
     private TextView mGoalTeamATextView;
     private TextView mFreeKickTeamATextView;
     private TextView mGoalTeamBTextView;
