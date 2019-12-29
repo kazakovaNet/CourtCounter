@@ -160,5 +160,7 @@
         android:layout_marginTop="@dimen/layout_margin_top"
         android:onClick="resetScore"
         android:text="@string/reset"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/colorAccent"
+        android:id="@+id/button" />
+
 </RelativeLayout>
